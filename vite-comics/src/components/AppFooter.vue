@@ -3,7 +3,7 @@ export default{
     name: 'AppFooter',
     data(){
         return{
-            
+          
         }
     }
 }
@@ -11,7 +11,7 @@ export default{
 
 <template>
     <footer>
-        
+
     </footer>
 </template>
 
