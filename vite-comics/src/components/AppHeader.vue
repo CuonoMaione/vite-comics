@@ -1,12 +1,53 @@
 <script>
 export default{
     name: "AppHeader",
-    components: 'NavLink',
+    components: {
+        NavLink
+    },
     data() {
         return {
-           props: {
-            
-           }
+           headList: [
+                {
+                    link: "#",
+                    text: "Characters",
+                },
+                {
+                    link: "#",
+                    text: "Comics",
+                },
+                {
+                    link: "#",
+                    text: "Movies",
+                },
+                {
+                    link: "#",
+                    text: "Tv",
+                },
+                {
+                    link: "#",
+                    text: "Games",
+                },
+                {
+                    link: "#",
+                    text: "Collectibles",
+                },
+                {
+                    link: "#",
+                    text: "Videos",
+                },
+                {
+                    link: "#",
+                    text: "Fans",
+                },
+                {
+                    link: "#",
+                    text: "News",
+                },
+                {
+                    link: "#",
+                    text: "Shop",
+                },
+            ]
         };
     },
     components: { NavLink }
@@ -23,15 +64,11 @@ import NavLink from './NavLink.vue';
 
         <img src="../assets/img/dc-logo.png" alt="">
 
-        <ul>
-            <li v-for="element in headList">
-                <a :href=" element.link ">{{ element.text }}</a>
-            </li>
-        </ul>
+     
+            <NavLink v-for="element in headList" :linkText="element.text" :linkWeb="element.link"/>
+            
     </header>
 
-    <NavLink>
-    </NavLink>
 </template>
 
 <style lang="scss" scoped>
@@ -50,21 +87,7 @@ img{
     height: 80px;
 }
 
-ul{
-    display: flex;
-    
-    list-style: none;
-    
-    li{
-        margin-right: 0.5rem; 
-        a{
-            text-decoration: none;
-            color: black;
-            text-transform: uppercase;
-        }
-    }
-    
-}
+
 
 
 </style>

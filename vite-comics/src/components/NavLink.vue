@@ -1,58 +1,39 @@
 <script>
+
 export default{
     name: 'NavLink',
-    data(){
-        return{
-            props: [
-                {
-                    link: "#",
-                    text: "Characters",
-                },
-                {
-                    link: "#",
-                    text: "Comics",
-                },
-                {
-                    link: "#",
-                    text: "Movies",
-                },
-                {
-                    link: "#",
-                    text: "Tv",
-                },
-                {
-                    link: "#",
-                    text: "Games",
-                },
-                {
-                    link: "#",
-                    text: "Collectibles",
-                },
-                {
-                    link: "#",
-                    text: "Videos",
-                },
-                {
-                    link: "#",
-                    text: "Fans",
-                },
-                {
-                    link: "#",
-                    text: "News",
-                },
-                {
-                    link: "#",
-                    text: "Shop",
-                },
-            ]
-        }
-    }
+    props: {
+        linkText : String ,
+        linkWeb : String ,
+    },
+    
 }
 </script>
 
 <template>
     
+    <ul>
+         <li> 
+            <a :href=" linkWeb "> {{ linkText }} </a> 
+        </li> 
+    </ul> 
+    
 </template>
 
-<style>
+<style scoped lang="scss">
+ul{
+    display: flex;
+    
+    list-style: none;
+    
+    li{
+        margin-right: 0.5rem; 
+        a{
+            text-decoration: none;
+            color: black;
+            text-transform: uppercase;
+        }
+    }
+    
+}
 </style>
