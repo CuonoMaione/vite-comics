@@ -20,6 +20,8 @@ export default {
         width: calc((100%/6) - 1rem);
         margin-left: 1rem;
         margin-bottom:2rem;
+        
+        
     }
 
     img{
@@ -30,7 +32,8 @@ export default {
     }
 
     h2{
-        font-size: 1rem;
+        font-size: 0.8rem;
         padding-top:0.5rem;
+        text-transform: uppercase;
     }
 </style>

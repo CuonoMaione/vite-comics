@@ -93,13 +93,16 @@ export default{
 
 <template>
     <main>
-
-        <img src="../assets/img/jumbotron.jpg" alt="">
-
+        <section>
+            <img id="jumbotron" src="../assets/img/jumbotron.jpg" alt="">
+            <span class="info"> CURRENT SERIES</span>
+        </section>    
         <div class="container">
 
             <CardComics v-for="card in dcComics" :cardImage="card.thumb" :cardTitle="card.series"/>
-
+                
+            <button> LOAD MORE </button>
+            
         </div>          
     </main>
 </template>
@@ -107,7 +110,7 @@ export default{
 <style scoped lang="scss">
 
 main{
-        background-color: black;
+        background-color: #1c1c1c;
         
         color: white;
         
@@ -118,12 +121,43 @@ div.container{
         flex-direction: row;
         flex-wrap: wrap;
         margin: 0 auto;
+        justify-content: center;
+        align-items: stretch;
     }
 
-img{
+#jumbotron{
     width: 100%;
     object-fit: cover;
     object-position: top;
-    height: 500px;
-}    
+    height: 350px;
+    margin-bottom: 2rem;
+    
+}
+
+button{
+    background-color: #0282f9;
+    color: white;
+    padding: 0.5rem  3rem;
+    font-size: 0.7rem;
+    font-weight: 600;
+    border: #1c1c1c;
+    margin-bottom: 2rem;
+}
+
+section{
+    position: relative;
+}
+span.info{
+    position:absolute;
+    top: 87%;
+    left: 10%;
+
+    background-color: #0282f9;
+    color: white;
+    padding: 0.5rem  3rem;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+
 </style>
