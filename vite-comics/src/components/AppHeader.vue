@@ -47,10 +47,12 @@ export default{
                     link: "#",
                     text: "Shop",
                 },
-            ]
+            ],
+
+           
         };
     },
-    components: { NavLink }
+    
 }
 
 import NavLink from './NavLink.vue';
@@ -64,9 +66,9 @@ import NavLink from './NavLink.vue';
 
         <img src="../assets/img/dc-logo.png" alt="">
 
-     
+        <ul>
             <NavLink v-for="element in headList" :linkText="element.text" :linkWeb="element.link"/>
-            
+        </ul>
     </header>
 
 </template>
@@ -87,7 +89,14 @@ img{
     height: 80px;
 }
 
-
+ul{
+    display: flex; 
+    list-style: none;
+    font-size: 0.7rem;
+    gap: 10px;
+    font-weight: 600;
+    
+}
 
 
 </style>

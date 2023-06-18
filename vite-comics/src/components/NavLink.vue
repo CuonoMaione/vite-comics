@@ -21,19 +21,14 @@ export default{
 </template>
 
 <style scoped lang="scss">
-ul{
-    display: flex;
-    
-    list-style: none;
     
     li{
-        margin-right: 0.5rem; 
+         
         a{
             text-decoration: none;
-            color: black;
+            color: #47474f;
             text-transform: uppercase;
         }
     }
     
-}
 </style>
